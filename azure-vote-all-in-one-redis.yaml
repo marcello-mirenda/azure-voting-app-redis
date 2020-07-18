@@ -110,13 +110,33 @@ spec:
         ingress:
           class: azure/application-gateway
 ---
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-production
+  namespace: default
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: marcello.mirenda@gmail.com
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: production-issuer-account-key
+    # Enable the HTTP-01 challenge provider
+    solvers:
+    - http01:
+        ingress:
+          class: azure/application-gateway
+---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: azure-voting-letsencrypt-staging
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
-    cert-manager.io/cluster-issuer: letsencrypt-staging
+    cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   tls:
   - hosts:
