@@ -18,7 +18,7 @@ To walk through a complete experience where this code is packaged into container
 
 ## Note
 
-I followed this documentation fot "Let's Encrypt" [how-to-letsencrypt](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/lets-encrypt/)
+I followed this documentation for "Let's Encrypt" [how-to-letsencrypt](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/lets-encrypt/)
 
 ## Contributing
 
