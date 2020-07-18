@@ -16,6 +16,10 @@ To walk through a quick deployment of this application, see the AKS [quick start
 
 To walk through a complete experience where this code is packaged into container images, uploaded to Azure Container Registry, and then run in and AKS cluster, see the [AKS tutorials](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app?WT.mc_id=none-github-nepeters).
 
+## Note
+
+I followed this documentation fot "Let's Encrypt" [how-to-letsencrypt](https://azure.github.io/application-gateway-kubernetes-ingress/how-tos/lets-encrypt/)
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
